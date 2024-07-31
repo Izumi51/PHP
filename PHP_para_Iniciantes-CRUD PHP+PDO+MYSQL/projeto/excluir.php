@@ -3,18 +3,16 @@ include_once "conexao.php";
 
 try {
     // Filtrar e validar dados recebidos via POST para evitar XSS
-    $nome = htmlspecialchars($_POST["nome"], ENT_QUOTES, 'UTF-8');
-    $login = htmlspecialchars($_POST["login"], ENT_QUOTES, 'UTF-8');
+    $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
 
     // Preparar a instrução SQL para prevenir injeção SQL
-    $insert = $conectar->prepare("INSERT INTO login (nome, login) VALUES (:nome, :login)");
+    $delete = $conectar->prepare("DELETE FROM login WHERE id = :id");
 
     // Vincular os parâmetros com os dados sanitizados
-    $insert->bindParam(':nome', $nome); 
-    $insert->bindParam(':login', $login);
+    $delete->bindParam(':id', $id, PDO::PARAM_INT);
 
     // Executar a instrução SQL
-    $insert->execute();
+    $delete->execute();
 
     // Redirecionar após a inserção
     header("Location: index.php");

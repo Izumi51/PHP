@@ -23,7 +23,7 @@
                 <td>$linha[nome]</td>
                 <td>$linha[login]</td>
                 <td>
-                    <a href='formEdita.php?id=$linha[id]'>Editar</a>
+                    <a href='formEditar.php?id=$linha[id]'>Editar</a>
                     <a href='excluir.php?id=$linha[id]''>Excluir</a>
                 </td>
             </tr>
