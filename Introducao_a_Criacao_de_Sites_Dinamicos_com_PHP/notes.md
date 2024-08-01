@@ -1,16 +1,16 @@
-Variaveis em php sao declaradas com $
+## Variáveis em php são declaradas com $
 
-'''
+```php
 <?php
 	$numero = 1;	//case sensitive, ou seja, interpreta diferente letras maiusculas ou minusculas
 	$Numero = 2;	//entao essas sao 3 variaveis diferentes
 	$NUMERO = 3;	
 ?>
-'''
+```
 
-operacoes matematicas
+## Operações Matemáticas
 
-'''
+```php
 <?php
 	$a = 2;
 	$b = 3;
@@ -27,11 +27,11 @@ operacoes matematicas
 	print $div;
 	print $expo;
 ?>
-'''
+```
 
-condicional
+## Condicional
 
-'''
+```php
 <?php
 	$a = 2;
 	$b = 3;
@@ -54,10 +54,10 @@ condicional
 		echo "impar";
 	}
 ?>
-'''
+```
 
-lacos de repeticao
-'''
+## laços de Repetição
+```php
 <?php
 	//while
 	$i = 0;
@@ -97,10 +97,4 @@ lacos de repeticao
 		echo "numero {$numero} no indice {$index}";
 	}	
 ?>
-'''
-
-'''
-<?php
-
-?>
-'''
+```
